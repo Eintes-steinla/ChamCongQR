@@ -90,8 +90,8 @@ namespace ChamCongQRCode
                     if (result != null)
                     {
                         timerScanQR.Stop();
-                        string employeeId = result.Text;
-                        ProcessAttendance(employeeId);
+                        string macn = result.Text;
+                        ProcessAttendance(macn);
                         System.Threading.Tasks.Task.Delay(3000).ContinueWith(t =>
                         {
                             this.Invoke((MethodInvoker)delegate {
@@ -105,7 +105,7 @@ namespace ChamCongQRCode
         }
         // Hàm xử lý logic chấm công chính
         string query;
-        private void ProcessAttendance(string employeeId)
+        private void ProcessAttendance(string macn)
         {
             using (SqlConnection connection = DatabaseHelper.GetConnection())
             {
@@ -118,7 +118,7 @@ namespace ChamCongQRCode
                     query = "SELECT HoTen FROM CongNhan WHERE MaCN = @MaCN";
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
-                        cmd.Parameters.AddWithValue("@MaCN", employeeId);
+                        cmd.Parameters.AddWithValue("@MaCN", macn);
                         var result = cmd.ExecuteScalar(); // ExecuteScalar hiệu quả hơn khi chỉ lấy 1 giá trị
 
                         if (result != null)
@@ -127,7 +127,7 @@ namespace ChamCongQRCode
                         }
                         else
                         {
-                            lblStatus.Text = $"Không tìm thấy nhân viên với mã: {employeeId}";
+                            lblStatus.Text = $"Không tìm thấy nhân viên với mã: {macn}";
                             lblStatus.ForeColor = Color.Red;
                             return;
                         }
@@ -138,7 +138,7 @@ namespace ChamCongQRCode
                     query = "INSERT INTO ChamCong (MaCN, ThoiGian) VALUES (@MaCN, @ThoiGian)";
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
-                        cmd.Parameters.AddWithValue("@MaCN", employeeId);
+                        cmd.Parameters.AddWithValue("@MaCN", macn);
                         cmd.Parameters.AddWithValue("@ThoiGian", now);
                         cmd.ExecuteNonQuery(); // Thực thi lệnh insert
                     }
@@ -150,7 +150,7 @@ namespace ChamCongQRCode
                     int soNgayCong = 0;
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
-                        cmd.Parameters.AddWithValue("@MaCN", employeeId);
+                        cmd.Parameters.AddWithValue("@MaCN", macn);
                         cmd.Parameters.AddWithValue("@Thang", now.Month);
                         cmd.Parameters.AddWithValue("@Nam", now.Year);
                         soNgayCong = (int)cmd.ExecuteScalar();
@@ -159,7 +159,7 @@ namespace ChamCongQRCode
                     // 4. Hiển thị thông tin đã xử lý lên giao diện
                     this.Invoke((MethodInvoker)delegate
                     {
-                        lblMaCN.Text = employeeId;
+                        lblMaCN.Text = macn;
                         lblHoTen.Text = hoTen;
                         lblGioQuet.Text = now.ToString("HH:mm:ss dd/MM/yyyy");
                         lblNgayCong.Text = soNgayCong.ToString();
