@@ -42,197 +42,212 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.pictureBoxCamera = new System.Windows.Forms.PictureBox();
-            this.lblCurrentTime = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblNgayCong = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblGioQuet = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblHoTen = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblMaCN = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.timerClock = new System.Windows.Forms.Timer(this.components);
-            this.timerScanQR = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCamera)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            pictureBoxCamera = new PictureBox();
+            lblCurrentTime = new Label();
+            groupBox1 = new GroupBox();
+            lblNgayCong = new Label();
+            label7 = new Label();
+            lblGioQuet = new Label();
+            label5 = new Label();
+            lblHoTen = new Label();
+            label3 = new Label();
+            lblMaCN = new Label();
+            label1 = new Label();
+            timerClock = new System.Windows.Forms.Timer(components);
+            timerScanQR = new System.Windows.Forms.Timer(components);
+            label2 = new Label();
+            lblStatus = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCamera).BeginInit();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // pictureBoxCamera
             // 
-            this.pictureBoxCamera.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxCamera.Location = new System.Drawing.Point(12, 53);
-            this.pictureBoxCamera.Name = "pictureBoxCamera";
-            this.pictureBoxCamera.Size = new System.Drawing.Size(530, 484);
-            this.pictureBoxCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxCamera.TabIndex = 0;
-            this.pictureBoxCamera.TabStop = false;
+            pictureBoxCamera.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxCamera.Location = new Point(15, 83);
+            pictureBoxCamera.Margin = new Padding(4, 5, 4, 5);
+            pictureBoxCamera.Name = "pictureBoxCamera";
+            pictureBoxCamera.Size = new Size(662, 755);
+            pictureBoxCamera.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxCamera.TabIndex = 0;
+            pictureBoxCamera.TabStop = false;
             // 
             // lblCurrentTime
             // 
-            this.lblCurrentTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCurrentTime.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentTime.ForeColor = System.Drawing.Color.Blue;
-            this.lblCurrentTime.Location = new System.Drawing.Point(427, 9);
-            this.lblCurrentTime.Name = "lblCurrentTime";
-            this.lblCurrentTime.Size = new System.Drawing.Size(345, 30);
-            this.lblCurrentTime.TabIndex = 1;
-            this.lblCurrentTime.Text = "dd/MM/yyyy HH:mm:ss";
-            this.lblCurrentTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblCurrentTime.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblCurrentTime.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCurrentTime.ForeColor = Color.Blue;
+            lblCurrentTime.Location = new Point(738, 16);
+            lblCurrentTime.Margin = new Padding(4, 0, 4, 0);
+            lblCurrentTime.Name = "lblCurrentTime";
+            lblCurrentTime.Size = new Size(431, 47);
+            lblCurrentTime.TabIndex = 1;
+            lblCurrentTime.Text = "dd/MM/yyyy HH:mm:ss";
+            lblCurrentTime.TextAlign = ContentAlignment.MiddleRight;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblNgayCong);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.lblGioQuet);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.lblHoTen);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.lblMaCN);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(590, 53);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(443, 255);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin chấm công";
+            groupBox1.Controls.Add(lblNgayCong);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(lblGioQuet);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(lblHoTen);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(lblMaCN);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox1.Location = new Point(738, 83);
+            groupBox1.Margin = new Padding(4, 5, 4, 5);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(4, 5, 4, 5);
+            groupBox1.Size = new Size(554, 398);
+            groupBox1.TabIndex = 2;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Thông tin chấm công";
             // 
             // lblNgayCong
             // 
-            this.lblNgayCong.AutoSize = true;
-            this.lblNgayCong.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayCong.Location = new System.Drawing.Point(159, 185);
-            this.lblNgayCong.Name = "lblNgayCong";
-            this.lblNgayCong.Size = new System.Drawing.Size(44, 32);
-            this.lblNgayCong.TabIndex = 7;
-            this.lblNgayCong.Text = "---";
+            lblNgayCong.AutoSize = true;
+            lblNgayCong.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNgayCong.Location = new Point(199, 289);
+            lblNgayCong.Margin = new Padding(4, 0, 4, 0);
+            lblNgayCong.Name = "lblNgayCong";
+            lblNgayCong.Size = new Size(53, 40);
+            lblNgayCong.TabIndex = 7;
+            lblNgayCong.Text = "---";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 188);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 28);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Số ngày công:";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(21, 294);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(165, 32);
+            label7.TabIndex = 6;
+            label7.Text = "Số ngày công:";
             // 
             // lblGioQuet
             // 
-            this.lblGioQuet.AutoSize = true;
-            this.lblGioQuet.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGioQuet.Location = new System.Drawing.Point(159, 137);
-            this.lblGioQuet.Name = "lblGioQuet";
-            this.lblGioQuet.Size = new System.Drawing.Size(44, 32);
-            this.lblGioQuet.TabIndex = 5;
-            this.lblGioQuet.Text = "---";
+            lblGioQuet.AutoSize = true;
+            lblGioQuet.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblGioQuet.Location = new Point(199, 214);
+            lblGioQuet.Margin = new Padding(4, 0, 4, 0);
+            lblGioQuet.Name = "lblGioQuet";
+            lblGioQuet.Size = new Size(53, 40);
+            lblGioQuet.TabIndex = 5;
+            lblGioQuet.Text = "---";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 140);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 28);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Giờ chấm công:";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(21, 219);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(180, 32);
+            label5.TabIndex = 4;
+            label5.Text = "Giờ chấm công:";
             // 
             // lblHoTen
             // 
-            this.lblHoTen.AutoSize = true;
-            this.lblHoTen.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoTen.Location = new System.Drawing.Point(159, 89);
-            this.lblHoTen.Name = "lblHoTen";
-            this.lblHoTen.Size = new System.Drawing.Size(44, 32);
-            this.lblHoTen.TabIndex = 3;
-            this.lblHoTen.Text = "---";
+            lblHoTen.AutoSize = true;
+            lblHoTen.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHoTen.Location = new Point(199, 139);
+            lblHoTen.Margin = new Padding(4, 0, 4, 0);
+            lblHoTen.Name = "lblHoTen";
+            lblHoTen.Size = new Size(53, 40);
+            lblHoTen.TabIndex = 3;
+            lblHoTen.Text = "---";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 92);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 28);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Họ và tên:";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(21, 144);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(123, 32);
+            label3.TabIndex = 2;
+            label3.Text = "Họ và tên:";
             // 
             // lblMaCN
             // 
-            this.lblMaCN.AutoSize = true;
-            this.lblMaCN.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaCN.Location = new System.Drawing.Point(159, 41);
-            this.lblMaCN.Name = "lblMaCN";
-            this.lblMaCN.Size = new System.Drawing.Size(44, 32);
-            this.lblMaCN.TabIndex = 1;
-            this.lblMaCN.Text = "---";
+            lblMaCN.AutoSize = true;
+            lblMaCN.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMaCN.Location = new Point(199, 64);
+            lblMaCN.Margin = new Padding(4, 0, 4, 0);
+            lblMaCN.Name = "lblMaCN";
+            lblMaCN.Size = new Size(53, 40);
+            lblMaCN.TabIndex = 1;
+            lblMaCN.Text = "---";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã nhân viên:";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(21, 69);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(166, 32);
+            label1.TabIndex = 0;
+            label1.Text = "Mã nhân viên:";
             // 
             // timerClock
             // 
-            this.timerClock.Enabled = true;
-            this.timerClock.Interval = 1000;
-            this.timerClock.Tick += new System.EventHandler(this.timerClock_Tick);
+            timerClock.Enabled = true;
+            timerClock.Interval = 1000;
+            timerClock.Tick += timerClock_Tick;
             // 
             // timerScanQR
             // 
-            this.timerScanQR.Interval = 500;
-            this.timerScanQR.Tick += new System.EventHandler(this.timerScanQR_Tick);
+            timerScanQR.Interval = 500;
+            timerScanQR.Tick += timerScanQR_Tick;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(436, 41);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "CHẤM CÔNG BẰNG QR CODE";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(15, 14);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(519, 48);
+            label2.TabIndex = 4;
+            label2.Text = "CHẤM CÔNG BẰNG QR CODE";
             // 
             // lblStatus
             // 
-            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(583, 370);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(460, 90);
-            this.lblStatus.TabIndex = 3;
-            this.lblStatus.Text = "Cán bộ công nhân viên đưa mã QR vào camera để chấm công";
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblStatus.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStatus.Location = new Point(729, 578);
+            lblStatus.Margin = new Padding(4, 0, 4, 0);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(575, 141);
+            lblStatus.TabIndex = 3;
+            lblStatus.Text = "Cán bộ công nhân viên đưa mã QR vào camera để chấm công";
+            lblStatus.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // ChamCongQR
+            // DecodeQR
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 569);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.lblCurrentTime);
-            this.Controls.Add(this.pictureBoxCamera);
-            this.Name = "ChamCongQR";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Phần mềm chấm công";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmChamCong_FormClosing);
-            this.Load += new System.EventHandler(this.frmChamCong_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCamera)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1378, 889);
+            Controls.Add(label2);
+            Controls.Add(lblStatus);
+            Controls.Add(groupBox1);
+            Controls.Add(lblCurrentTime);
+            Controls.Add(pictureBoxCamera);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "DecodeQR";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Phần mềm chấm công";
+            FormClosing += frmChamCong_FormClosing;
+            Load += frmChamCong_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCamera).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

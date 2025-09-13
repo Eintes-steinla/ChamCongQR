@@ -11,8 +11,8 @@ namespace ChamCongQRCode
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new EncodeQR());
-            //Application.Run(new DecodeQR());
+            //Application.Run(new EncodeQR());
+            Application.Run(new DecodeQR());
         }
     }
 }

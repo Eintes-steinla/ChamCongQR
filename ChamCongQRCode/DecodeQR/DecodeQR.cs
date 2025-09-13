@@ -115,7 +115,7 @@ namespace ChamCongQRCode
                     string hoTen = "";
 
                     // 1. Lấy thông tin nhân viên từ database
-                    query = "SELECT HoTen FROM CongNhan WHERE MaCN = @MaCN";
+                    query = "SELECT hoten FROM CongNhan WHERE MaCN = @MaCN";
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@MaCN", macn);
@@ -135,18 +135,18 @@ namespace ChamCongQRCode
 
                     DateTime now = DateTime.Now;
 
-                    query = "INSERT INTO ChamCong (MaCN, ThoiGian) VALUES (@MaCN, @ThoiGian)";
+                    query = "INSERT INTO ChamCong (MaCN, gioquet) VALUES (@MaCN, @gioquet)";
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@MaCN", macn);
-                        cmd.Parameters.AddWithValue("@ThoiGian", now);
+                        cmd.Parameters.AddWithValue("@gioquet", now);
                         cmd.ExecuteNonQuery(); // Thực thi lệnh insert
                     }
 
                     // 3. Tính tổng số ngày công đã làm trong tháng hiện tại
-                    query = @"SELECT COUNT(DISTINCT CAST(ThoiGian AS DATE))
+                    query = @"SELECT COUNT(DISTINCT CAST(gioquet AS DATE))
                                           FROM ChamCong
-                                          WHERE MaCN = @MaCN AND MONTH(ThoiGian) = @Thang AND YEAR(ThoiGian) = @Nam";
+                                          WHERE MaCN = @MaCN AND MONTH(gioquet) = @Thang AND YEAR(gioquet) = @Nam";
                     int soNgayCong = 0;
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
